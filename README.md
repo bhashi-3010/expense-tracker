@@ -1,87 +1,98 @@
-# 💰 Expense Tracker
+# 💰 Expense Tracker (Full Stack Application)
 
-A full-stack web application to track income and expenses, visualize spending patterns, and manage personal finances efficiently.
-
----
-
-## 🚀 Overview
-
-The Expense Tracker helps users:
-
-* Record income and expenses
-* Monitor financial balance
-* Analyze spending through visual charts
-* Manage transactions in a simple interface
+A modern full-stack Expense Tracker web application to manage income, expenses, and visualize financial insights using interactive dashboards.
 
 ---
 
-## ✨ Key Features
+## 📌 Overview
 
-* 📊 **Dashboard** – View total income, expenses, and balance
-* 💸 **Transaction Management** – Add, edit, delete transactions
-* 🔍 **Search Functionality** – Quickly find transactions
-* 📈 **Bar Chart** – Compare spending vs budget
-* 🍩 **Donut Chart** – Category-wise expense distribution
-* ⚙️ **Settings Page** – Basic user preferences (UI)
+This project helps users efficiently track their financial activities without complex tools. It is ideal for:
 
----
+* Students learning full-stack development
+* Developers practicing REST APIs and MongoDB
+* Users who want a simple personal finance manager
 
-## 🛠️ Tech Stack
-
-| Layer    | Technology            |
-| -------- | --------------------- |
-| Frontend | HTML, CSS, JavaScript |
-| Backend  | Node.js, Express.js   |
-| Database | MongoDB (Mongoose)    |
+The system records transactions, calculates balances, and provides visual insights like charts and category breakdowns.
 
 ---
 
-## 📁 Project Structure
+## ✨ Features
+
+* 📊 Dashboard showing total income, expenses, and balance
+* 💸 Add, edit, and delete transactions
+* 🔍 Search transactions instantly
+* 📈 Bar chart for spending analysis
+* 🍩 Donut chart for category distribution
+* 📂 Category-wise expense tracking
+* ⚙️ Settings page (UI-based preferences)
+* 🤖 Simulated AI categorization button
+
+---
+
+## 🏗️ Tech Stack
+
+**Frontend**
+
+* HTML
+* CSS
+* JavaScript
+
+**Backend**
+
+* Node.js
+* Express.js
+
+**Database**
+
+* MongoDB (Mongoose ODM)
+
+---
+
+## 📂 Project Structure
 
 ```
 FinTrack/
-│
-├── frontend/
+├── frontend/              # UI (HTML, CSS, JS)
 │   └── index.html
 │
-├── backend/
-│   ├── server.js
-│   ├── models/
-│   ├── routes/
+├── backend/               # Server-side logic
+│   ├── models/            # Mongoose schemas
+│   ├── routes/            # API routes
+│   ├── server.js          # Entry point
 │   └── package.json
 │
-├── .env.example
+├── .env.example           # Environment variables template
 └── README.md
 ```
 
 ---
 
-## ⚙️ Setup Guide
+## ⚙️ Installation
 
-### 1. Clone Repository
+### 1️⃣ Clone Repository
 
 ```
-git clone https://github.com/your-username/expense-tracker.git
+git clone https://github.com/bhashi-3010/expense-tracker.git
 cd expense-tracker
 ```
 
 ---
 
-### 2. Backend Setup
+### 2️⃣ Backend Setup
 
 ```
 cd backend
 npm install
 ```
 
-Create a `.env` file:
+Create `.env` file:
 
 ```
 MONGO_URI=your_mongodb_connection_string
 PORT=5000
 ```
 
-Start server:
+Run server:
 
 ```
 npm start
@@ -89,32 +100,58 @@ npm start
 
 ---
 
-### 3. Frontend Setup
+### 3️⃣ Frontend Setup
 
-Open the file:
+Open:
 
 ```
 frontend/index.html
 ```
 
-Or run using Live Server.
+Or use Live Server in VS Code.
 
 ---
 
 ## 🌐 API Endpoints
 
-| Method | Endpoint              | Description            |
-| ------ | --------------------- | ---------------------- |
-| GET    | /api/transactions     | Fetch all transactions |
-| POST   | /api/transactions     | Add new transaction    |
-| PUT    | /api/transactions/:id | Update transaction     |
-| DELETE | /api/transactions/:id | Delete transaction     |
+Base URL: `http://localhost:5000/api/transactions`
+
+| Method | Endpoint | Description          |
+| ------ | -------- | -------------------- |
+| GET    | /        | Get all transactions |
+| POST   | /        | Add new transaction  |
+| PUT    | /:id     | Update transaction   |
+| DELETE | /:id     | Delete transaction   |
+
+---
+
+## 📊 Data Model
+
+```
+{
+  title: String,
+  amount: Number,
+  category: String,
+  type: "income" | "expense",
+  date: String
+}
+```
+
+---
+
+## 📈 Functional Flow
+
+1. User adds a transaction
+2. Data is stored in MongoDB
+3. Backend processes totals
+4. Frontend updates UI dynamically
+5. Charts reflect real-time financial data
 
 ---
 
 ## 🔐 Environment Variables
 
-Create a `.env` file in the backend:
+Create a `.env` file inside backend:
 
 ```
 MONGO_URI=your_mongodb_connection_string
@@ -123,22 +160,48 @@ PORT=5000
 
 ---
 
-## 📈 Future Enhancements
+## 🧠 Design Highlights
 
-* User authentication (Login / Signup)
-* Budget alerts & notifications
-* Export reports (PDF / Excel)
-* Mobile responsive design
-* Real-time analytics
+* RESTful API structure
+* Clean separation of frontend and backend
+* Dynamic UI updates using JavaScript
+* Real-time calculation of financial data
+* Modular backend (routes + models)
+
+---
+
+## 🚀 Future Enhancements
+
+* User authentication (JWT login/signup)
+* Budget alerts and notifications
+* Export reports (PDF/Excel)
+* Mobile responsive UI
+* Cloud deployment
+
+---
+
+## 🧪 Testing
+
+You can test APIs using:
+
+* Postman
+* Browser (GET requests)
+* Frontend UI
 
 ---
 
 ## 👨‍💻 Author
 
-**Thudumaladinne Bhashitha**
+**Bhashitha Royal**
 
 ---
 
 ## 📌 Note
 
-This project was developed as a learning project to understand full-stack web development and real-world application structure.
+This project was built for learning full-stack development and demonstrating real-world application architecture.
+
+---
+
+## ⭐ Contribution
+
+Feel free to fork, improve, and contribute to this project.
