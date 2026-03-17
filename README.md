@@ -135,7 +135,7 @@ PORT=5000
 
 ## 👨‍💻 Author
 
-**Bhashitha Royal**
+**Thudumaladinne Bhashitha**
 
 ---
 
