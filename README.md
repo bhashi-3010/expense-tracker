@@ -52,16 +52,16 @@ The system records transactions, calculates balances, and provides visual insigh
 
 ```
 FinTrack/
-├── frontend/              # UI (HTML, CSS, JS)
+├── frontend/              
 │   └── index.html
 │
-├── backend/               # Server-side logic
-│   ├── models/            # Mongoose schemas
-│   ├── routes/            # API routes
-│   ├── server.js          # Entry point
+├── backend/               
+│   ├── models/            
+│   ├── routes/            
+│   ├── server.js          
 │   └── package.json
 │
-├── .env.example           # Environment variables template
+├── .env.example          
 └── README.md
 ```
 
